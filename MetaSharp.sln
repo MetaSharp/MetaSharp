@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaSharp.Core", "src\MetaSharp.Core\MetaSharp.Core.csproj", "{9EAB429A-0864-41A9-88AA-9E2A1617E8BB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D80C0D0D-1221-43B2-A0B2-30D80D93E0DC} = {D80C0D0D-1221-43B2-A0B2-30D80D93E0DC}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F70E25E5-D404-440B-B7BE-9AF637E18E46}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +20,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaSharp.Core.Test", "test\MetaSharp.Core.Test\MetaSharp.Core.Test.csproj", "{46C8F02C-A14A-4FA5-87AF-17D701F3A31B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaSharp.Abstractions", "src\MetaSharp.Abstractions\MetaSharp.Abstractions.csproj", "{D80C0D0D-1221-43B2-A0B2-30D80D93E0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaSharp.MSBuild", "src\MetaSharp.MSBuild\MetaSharp.MSBuild.csproj", "{52ECAF04-05BB-4407-9E03-A2009D6797B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +41,10 @@ Global
 		{D80C0D0D-1221-43B2-A0B2-30D80D93E0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D80C0D0D-1221-43B2-A0B2-30D80D93E0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D80C0D0D-1221-43B2-A0B2-30D80D93E0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52ECAF04-05BB-4407-9E03-A2009D6797B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52ECAF04-05BB-4407-9E03-A2009D6797B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52ECAF04-05BB-4407-9E03-A2009D6797B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52ECAF04-05BB-4407-9E03-A2009D6797B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +53,7 @@ Global
 		{9EAB429A-0864-41A9-88AA-9E2A1617E8BB} = {5E67A0CE-23FF-47E4-AD6A-1760B03987B3}
 		{46C8F02C-A14A-4FA5-87AF-17D701F3A31B} = {C7FC9035-A125-411D-AA89-C55AE13C3A87}
 		{D80C0D0D-1221-43B2-A0B2-30D80D93E0DC} = {5E67A0CE-23FF-47E4-AD6A-1760B03987B3}
+		{52ECAF04-05BB-4407-9E03-A2009D6797B8} = {5E67A0CE-23FF-47E4-AD6A-1760B03987B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E5275AC-113D-40D0-B638-D0818136CE3C}

@@ -25,4 +25,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MetaSharp.Abstractions\MetaSharp.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
