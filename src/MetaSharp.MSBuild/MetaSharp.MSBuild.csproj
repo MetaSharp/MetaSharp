@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,7 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Properties\MetaSharp.MSBuild.props" PackagePath="Properties\"/>
+    <Content Include="build\MetaSharp.MSBuild.props" PackagePath="build\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
   <UsingTask TaskName="MetaSharp.MSBuild.MetaSharpBuild" AssemblyName="$(AssemblyName)" />
