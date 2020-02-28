@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -11,5 +11,15 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MetaSharp.MSBuild\MetaSharp.MSBuild.csproj" PrivateAssets="all"/>
+  </ItemGroup>
+
+  <UsingTask TaskName="MetaSharpBuild" AssemblyFile="..\..\src\MetaSharp.MSBuild\bin\$(Configuration)\netstandard2.0\MetaSharp.MSBuild.dll" />
+  
+  <Target Name="CodeGen" BeforeTargets="BeforeCompile">
+    <MetaSharpBuild />
+  </Target>
 
 </Project>

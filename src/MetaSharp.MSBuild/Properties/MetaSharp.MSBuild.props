@@ -1,0 +1,9 @@
+<Project TreatAsLocalProperty="_MetaSharpGeneratorTaskFolder;_MetaSharpGeneratorTaskAssembly">
+
+    <PropertyGroup>
+        <_MetaSharpGeneratorTaskFolder>netstandard2.0</_MetaSharpGeneratorTaskFolder>
+        <_MetaSharpGeneratorTaskAssembly>$(MSBuildThisFileDirectory)..\bin\Debug\netstandard2.0\MetaSharp.MSBuild.dll</_MetaSharpGeneratorTaskAssembly>
+    </PropertyGroup>
+
+    <UsingTask TaskName="MetaSharp.MSBuild.MetaSharpBuild" AssemblyFile="$(_MetaSharpGeneratorTaskAssembly)" />
+</Project>
