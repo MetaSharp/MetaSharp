@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -19,7 +19,7 @@
   <UsingTask TaskName="MetaSharpBuild" AssemblyFile="..\..\src\MetaSharp.MSBuild\bin\$(Configuration)\netstandard2.0\MetaSharp.MSBuild.dll" />
   
   <Target Name="CodeGen" BeforeTargets="BeforeCompile">
-    <MetaSharpBuild />
+    <!--<MetaSharpBuild />-->
   </Target>
 
 </Project>
