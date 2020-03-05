@@ -12,7 +12,7 @@
     <PackageReference Include="AnyConstraint.Analyzer" Version="1.1.0" PrivateAssets="All" />
 
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="$(RoslynVersion)" />
-    <PackageReference Include="System.Reflection.TypeExtensions" Version="$(SystemVersion)" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.6.0" />
     <PackageReference Include="Ryder" Version="0.6.0" />
   </ItemGroup>
 

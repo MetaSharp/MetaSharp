@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 #if !APPDOMAINS
@@ -40,8 +41,8 @@ namespace Cometary
 #if APPDOMAINS
         private static Assembly Resolving(object sender, ResolveEventArgs args)
         {
-            var compilation = CurrentCompilation;
-            var assemblyName = new AssemblyName(args.Name);
+            Compilation compilation = CurrentCompilation;
+            AssemblyName assemblyName = new AssemblyName(args.Name);
 
             if (Loaded.TryGetValue(assemblyName.Name, out Assembly result))
                 return result;
@@ -49,7 +50,7 @@ namespace Cometary
             if (compilation == null)
                 return null;
 
-            foreach (var reference in compilation.References)
+            foreach (MetadataReference reference in compilation.References)
             {
                 if (!(reference is PortableExecutableReference pe) ||
                     !Path.GetFileNameWithoutExtension(pe.Display).Equals(assemblyName.Name, StringComparison.OrdinalIgnoreCase))
